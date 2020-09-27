@@ -45,14 +45,6 @@ public class Invoice {
 		this.id = id;
 	}
 
-	public String getfullName() {
-		return fullName;
-	}
-
-	public void setfullName(String fullName) {
-		this.fullName = fullName;
-	}
-
 	public String getPhone() {
 		return phone;
 	}
