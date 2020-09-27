@@ -1,5 +1,7 @@
 package com.myclass.fashionshop.restcontroller;
 
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,8 @@ public class InvoiceRestController {
 	
 	@PostMapping("/addInvoice")
 	public Object add(@RequestBody Invoice invoice) {
+		invoice.setTime(LocalDateTime.now());
+		invoice.setStatus("pending");
 		Invoice entity = invoiceRepository.save(invoice);
 		return new ResponseEntity<Invoice>(entity, HttpStatus.CREATED);
 	}
