@@ -1,7 +1,8 @@
 package com.myclass.fashionshop.entity;
 
-import java.time.LocalDateTime;
 
+
+import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,8 +19,11 @@ public class Invoice {
 	private String phone;
 	private String email;
 	private String address;
+	private String status;
+	
 	private LocalDateTime time;
 	private String session;
+
 
 	public Long getId() {
 		return id;
@@ -44,6 +48,7 @@ public class Invoice {
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 
 	public String getPhone() {
 		return phone;
@@ -75,6 +80,14 @@ public class Invoice {
 
 	public void setSession(String session) {
 		this.session = session;
+	}
+	
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public Invoice(String fullName, String phone, String email, String address, String session) {
